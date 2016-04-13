@@ -1,4 +1,5 @@
 require_relative "../test_helper"
+
 class HospitalTest < Minitest::Test
 
 	def test_valid_at_creation
