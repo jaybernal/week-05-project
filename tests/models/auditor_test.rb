@@ -7,13 +7,13 @@ class AuditorTest < Minitest::Test
 		refute_nil(c)
 	end
 
-	def test_valid_with_a_valid_name
+	def test_valid_with_a_auditor_name
 		a = Auditor.new(name: "Melissa Bernal", email: "melissaB@nedonation.org", phone: "402.578-5444")
 		a.name = "Melissa Bernal"
 		assert_equal("Melissa Bernal", a.name)
 	end
 
-	def test_invalid_without_a_valid_name
+	def test_invalid_without_an_auditor_name
 		a = Auditor.new(name: "Melissa Bernal", email: "melissaB@nedonation.org", phone: "402.578-5444")
 		assert(a.valid?, "Should be valid at initialization")
 
@@ -21,13 +21,13 @@ class AuditorTest < Minitest::Test
 		refute(a.name?, "Should be invalid without a name")
 	end
 
-	def test_valid_with_a_valid_email
+	def test_valid_with_an_auditor_email
 		a = Auditor.new(name: "Melissa Bernal", email: "melissaB@nedonation.org", phone: "402.578-5444")
 		a.email = "melissaB@nedonation.org"
 		assert_equal("melissaB@nedonation.org", a.email)
 	end
 
-	def test_invalid_without_a_valid_email
+	def test_invalid_without_an_auditor_email
 		a = Auditor.new(name: "Melissa Bernal", email: "melissaB@nedonation.org", phone: "402.578-5444")
 		assert(a.valid?, "Should be valid at initialization")
 
@@ -35,13 +35,13 @@ class AuditorTest < Minitest::Test
 		refute(a.email, "Should be invalid without an email")
 	end
 
-	def test_valid_with_a_valid_phone
+	def test_valid_with_an_auditor_phone
 		a = Auditor.new(name: "Melissa Bernal", email: "melissaB@nedonation.org", phone: "402.578-5444")
 		a.phone = "402-578-5444"
 		assert_equal("402-578-5444", a.phone)
 	end
 
-	def test_invalid_without_a_valid_phone
+	def test_invalid_without_an_auditor_phone
 		a = Auditor.new(name: "Melissa Bernal", email: "melissaB@nedonation.org", phone: "402.578-5444")
 		assert(a.valid?, "Should be valid at initialization")
 
