@@ -1,0 +1,19 @@
+<h1>Audit Index View</h1>
+
+<table border="1" width="50%">
+	<tr>
+		<th>Auditor's Name</th>
+		<th>Auditor's Email</th>
+		<th>Auditor's Phone</th>
+	</tr>
+	<tr>
+		<% @auditors.each do |auditor| %>
+		<th><a href="/auditors/<%= auditor.id %>"><%= auditor.name %></th></a>
+		<th><%= auditor.email %></th>
+		<th><%= auditor.phone %></th>
+		<th><a href="/auditors/<%= auditor.id %>/edit">Edit</a></th>
+	</tr>
+	<% end %>
+</table>
+</br>
+<p><a href="/auditors/new">Add New Auditor</a></p>

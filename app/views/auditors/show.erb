@@ -1,0 +1,10 @@
+<h1>Details about <%=@auditor.name %></h1>
+
+<ul>
+	<li><%=@auditor.name  %></li>
+	<li><%=@auditor.email %></li>
+	<li><%=@auditor.phone %></li>
+</ul>
+
+<p><a href="/auditors/<%= @auditor.id %>/edit">Edit <%= @auditor.name %></a></p>
+<p><a href="/auditors">Return to Employee List</a></p>

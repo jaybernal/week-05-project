@@ -1,0 +1,10 @@
+<h1>Create New Auditor</h1>
+
+<form action= "/auditors" method= "post">
+		<input type="text" 		placeholder= "Name" 					name="name" 	value="<%= @auditor.name %>">
+		<input type="text"		placeholder= "Email Address"	name="email"	value="<%= @auditor.email %>">
+		<input type="text"		placeholder= "Phone Number"		name="phone"	value="<%= @auditor.phone %>">
+		<input type="submit"	value="Make a New Auditor">
+</form>
+
+<a href="/auditors/index"></a>
