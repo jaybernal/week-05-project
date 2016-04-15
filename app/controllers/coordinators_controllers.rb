@@ -37,10 +37,10 @@ patch "/coordinators/:id/?" do
 	if @coordinator.update_attributes(name: params["name"],
 		phone:params["phone"],
 		email:params["email"])
-	redirect to("/coordinators/#{@coordinator.id}")
-else
-	erb :"coordinators/edit"		
-end
+		redirect to("/coordinators/#{@coordinator.id}")
+	else
+		erb :"coordinators/edit"		
+	end
 end
 
 #########DESTROY

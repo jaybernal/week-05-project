@@ -1,0 +1,10 @@
+<h1>Details about <%=@hospital.name %></h1>
+
+<ul>
+	<li><%=@hospital.name  %></li>
+	<li><%=@hospital.city %></li>
+	<li><%=@hospital.phone %></li>
+</ul>
+
+<p><a href="/hospitals/<%= @hospital.id %>/edit">Edit <%= @hospital.name %></a></p>
+<p><a href="/hospitals">Return to Hospital List</a></p>

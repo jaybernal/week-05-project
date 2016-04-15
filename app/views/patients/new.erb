@@ -1,0 +1,10 @@
+<h1>Create New Patient </h1>
+
+<form action= "/patients" method= "post">
+		<input type="text" 	placeholder= "Name" 				name="name" 			value="<%= @patient.name %>">
+		<input type="text"	placeholder= "Gender"				name="gender"			value="<%= @patient.gender %>">
+		<input type="text"	placeholder= "List Organs"	name="organs_list"value="<%= @patient.organs_list %>">
+		<input type="integer"	placeholder= "Date of Death"name="term_date"value="<%= @patient.term_date %>">
+
+		<input type="submit"	value="Make a New Patient">
+</form>

@@ -1,0 +1,11 @@
+<h1>Details about <%= @patient.name %></h1>
+
+<ul>
+	<li><%= @patient.name  %></li>
+	<li><%= @patient.gender %></li>
+	<li><%= @patient.organs_list %></li>
+	<li><%= @patient.term_date %></li>
+</ul>
+
+<p><a href="/patients/<%= @patient.id %>/edit">Edit <%= @patient.name %></a></p>
+<p><a href="/patients">Return to Patient's List</a></p>

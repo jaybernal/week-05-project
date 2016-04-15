@@ -1,0 +1,19 @@
+<h1>Hospital List</h1>
+
+<table border="1" width="50%">
+	<tr>
+		<th>Hospital Name</th>
+		<th>Hospital Email</th>
+		<th>Hospital Phone</th>
+	</tr>
+	<tr>
+		<% @hospitals.each do |hospital| %>
+		<th><a href="/hospitals/<%= hospital.id %>"><%= hospital.name %></th></a>
+		<th><%= hospital.city %></th>
+		<th><%= hospital.phone %></th>
+		<th><a href="/hospitals/<%= hospital.id %>/edit">Edit</a></th>
+	</tr>
+	<% end %>
+</table>
+</br>
+<p><a href="/hospitals/new">Add New Hospital</a></p>

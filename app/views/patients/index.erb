@@ -1,0 +1,21 @@
+<h1>Patient List</h1>
+
+<table border="1" width="50%">
+	<tr>
+		<th>Patient's Name</th>
+		<th>Patient's Gender</th>
+		<th>Patient's Organs Donated</th>
+		<th>Patient's Date of Death</th>
+	</tr>
+	<tr>
+		<% @patients.each do |patient| %>
+		<th><a href="/patients/<%= patient.id %>"><%= patient.name %></th></a>
+		<th><%= patient.gender %></th>
+		<th><%= patient.organs_list %></th>
+		<th><%= patient.term_date %></th>
+		<th><a href="/patients/<%= patient.id %>/edit">Edit</a></th>
+	</tr>
+	<% end %>
+</table>
+</br>
+<p><a href="/patients/new">Add New Patient</a></p>
