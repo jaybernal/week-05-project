@@ -1,0 +1,21 @@
+<h1>List of All Coordinators</h1>
+
+
+<table border="1" width="50%">
+	<tr>
+		<th>Auditor's Name</th>
+		<th>Auditor's Email Address</th>
+		<th>Auditor's Phone</th>
+	</tr>
+	<tr>
+		<% @coordinators.each do |coordinator| %>
+	<tr>
+		<th><%= coordinator.name %></th>
+		<th><%= coordinator.email%></th>
+		<th><%= coordinator.phone%></th>
+		<th><a href="/coordinators/<%= coordinator.id %>/edit">Edit</th></a>
+		<% end %>
+	</tr>
+</table>
+
+<p><a href="/coordinators/new"></p>Add new Coordinators</a>

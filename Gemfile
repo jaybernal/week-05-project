@@ -9,3 +9,5 @@ gem "pg"
 gem "sinatra"
 gem "sinatra-activerecord"
 gem "sinatra-contrib"
+
+gem 'email_validator'

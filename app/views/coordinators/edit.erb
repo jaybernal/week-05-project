@@ -1,0 +1,9 @@
+<h1>Edit Coordinator</h1>
+
+<form action= "/coordinators/<%= @coordinator.id %>" method= "post">
+		<input type="hidden"	name="_method"value="patch">
+		<input type="text" 		name="name" 	value="<%= @coordinator.name %>">
+		<input type="text"		name="email"	value="<%= @coordinator.email %>">
+		<input type="text"		name="phone"	value="<%= @coordinator.phone %>">
+		<input type="submit"	value="Edit Coordinator">
+</form>

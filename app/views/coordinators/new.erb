@@ -1,0 +1,9 @@
+<h1>Create New Coordinator</h1>
+
+<form action= "/coordinators" method= "post">
+		<input type="text" 		placeholder= "Name" 					name="name" 	value="<%= @coordinator.name %>">
+		<input type="text"		placeholder= "Email Address"	name="email"	value="<%= @coordinator.email %>">
+		<input type="text"		placeholder= "Phone Number"		name="phone"	value="<%= @coordinator.phone %>">
+
+		<input type="submit"	value="Make a New Coordinator">
+</form>

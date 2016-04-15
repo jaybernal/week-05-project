@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,15 +24,16 @@ ActiveRecord::Schema.define(version: 1) do
 
   create_table "cases", force: :cascade do |t|
     t.integer "number",         null: false
-    t.integer "coordinator_id", null: false
-    t.integer "auditor_id",     null: false
+    t.integer "coordinator_id"
+    t.integer "auditor_id"
+    t.integer "hosital_id"
   end
 
   create_table "coordinators", force: :cascade do |t|
     t.string  "name",       null: false
     t.string  "email",      null: false
     t.string  "phone",      null: false
-    t.integer "auditor_id", null: false
+    t.integer "auditor_id"
   end
 
   create_table "coordinators_hospitals", id: false, force: :cascade do |t|
@@ -51,7 +52,7 @@ ActiveRecord::Schema.define(version: 1) do
     t.string  "gender",      null: false
     t.text    "organs_list", null: false
     t.integer "term_date",   null: false
-    t.integer "hosital_id",  null: false
+    t.integer "hospital_id"
   end
 
 end

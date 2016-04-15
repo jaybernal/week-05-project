@@ -1,7 +1,7 @@
 <h1>Edit <%= @auditor.name %> profile</h1>
 
 <form action= "/auditors/<%= @auditor.id %>" method= "post">
-		<input type="hidden" 	name="_method" 								value="patch">
+		<input type="hidden" 	name="_method"value="patch">
 		<input type="text" 		name="name" 	value="<%= @auditor.name %>">
 		<input type="text"		name="email"	value="<%= @auditor.email %>">
 		<input type="text"		name="phone"	value="<%= @auditor.phone %>">

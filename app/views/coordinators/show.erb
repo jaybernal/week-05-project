@@ -1,0 +1,10 @@
+<h1>Details about <%= @coordinator.name %></h1>
+
+<ul>
+	<li> <%= @coordinator.name %></li>
+	<li> <%= @coordinator.email%></li>
+	<li> <%= @coordinator.phone%></li>
+</ul>
+
+<p><a href="/coordinators/<%= @coordinator.id %>/edit">Edit <%= @coordinator.name %></a></p>
+<p><a href="/coordinators">Return to Employee List</a></p>
