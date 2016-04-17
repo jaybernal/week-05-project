@@ -1,19 +1,30 @@
-<h1>Hospital List</h1>
+<h2>Hospital List</h2>
 
-<table border="1" width="50%">
-	<tr>
-		<th>Hospital Name</th>
-		<th>Hospital Email</th>
-		<th>Hospital Phone</th>
-	</tr>
-	<tr>
-		<% @hospitals.each do |hospital| %>
-		<th><a href="/hospitals/<%= hospital.id %>"><%= hospital.name %></th></a>
-		<th><%= hospital.city %></th>
-		<th><%= hospital.phone %></th>
-		<th><a href="/hospitals/<%= hospital.id %>/edit">Edit</a></th>
-	</tr>
-	<% end %>
-</table>
-</br>
+
+<div class="row">
+	<div class="col-md-6">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Hospital Name</th>
+					<th>Hospital Email</th>
+					<th>Hospital Phone</th>
+					<th>Edit Hospital</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @hospitals.each do |hospital| %>
+				<tr>
+					<td><a href="/hospitals/<%= hospital.id %>"><%= hospital.name %></td></a>
+					<td><%= hospital.city %></td>
+					<td><%= hospital.phone %></td>
+					<td><a href="/hospitals/<%= hospital.id %>/edit">Edit</a></td>
+					<% end %>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
 <p><a href="/hospitals/new">Add New Hospital</a></p>

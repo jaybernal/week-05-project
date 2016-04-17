@@ -1,19 +1,27 @@
 <h1>Audit Index View</h1>
 
-<table border="1" width="50%">
-	<tr>
-		<th>Auditor's Name</th>
-		<th>Auditor's Email</th>
-		<th>Auditor's Phone</th>
-	</tr>
-	<tr>
-		<% @auditors.each do |auditor| %>
-		<th><a href="/auditors/<%= auditor.id %>"><%= auditor.name %></th></a>
-		<th><%= auditor.email %></th>
-		<th><%= auditor.phone %></th>
-		<th><a href="/auditors/<%= auditor.id %>/edit">Edit</a></th>
-	</tr>
-	<% end %>
-</table>
-</br>
+<div class="row">
+	<div class="col-md-6">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Auditor's Name</th>
+					<th>Auditor's Email</th>
+					<th>Auditor's Phone</th>
+					<th>Edit User</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @auditors.each do |auditor| %>
+				<tr>
+					<td><a href="/auditors/<%= auditor.id %>"><%= auditor.name %></td></a>
+					<td><%= auditor.email %></td>
+					<td><%= auditor.phone %></td>
+					<td><a href="/auditors/<%= auditor.id %>/edit">Edit</a></td>
+					<% end %>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
 <p><a href="/auditors/new">Add New Auditor</a></p>

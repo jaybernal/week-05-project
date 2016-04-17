@@ -1,21 +1,29 @@
 <h1>Patient List</h1>
 
-<table border="1" width="50%">
-	<tr>
-		<th>Patient's Name</th>
-		<th>Patient's Gender</th>
-		<th>Patient's Organs Donated</th>
-		<th>Patient's Date of Death</th>
-	</tr>
-	<tr>
-		<% @patients.each do |patient| %>
-		<th><a href="/patients/<%= patient.id %>"><%= patient.name %></th></a>
-		<th><%= patient.gender %></th>
-		<th><%= patient.organs_list %></th>
-		<th><%= patient.term_date %></th>
-		<th><a href="/patients/<%= patient.id %>/edit">Edit</a></th>
-	</tr>
-	<% end %>
-</table>
-</br>
+<div class="row">
+	<div class="col-md-6">
+		<table class="table table-hover">
+			<tr>
+				<thead>
+					<th>Patient's Name</th>
+					<th>Patient's Gender</th>
+					<th>Patient's Organs Donated</th>
+					<th>Patient's Date of Death</th>
+					<th>Edit User</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @patients.each do |patient| %>
+				<tr>
+					<td><a href="/patients/<%= patient.id %>"><%= patient.name %></td></a>
+					<td><%= patient.gender %></td>
+					<td><%= patient.organs_list %></td>
+					<td><%= patient.term_date %></td>
+					<td><a href="/patients/<%= patient.id %>/edit">Edit</a></td>
+					<% end %>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
 <p><a href="/patients/new">Add New Patient</a></p>

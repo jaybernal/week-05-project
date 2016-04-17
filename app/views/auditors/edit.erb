@@ -1,11 +1,12 @@
-<h1>Edit <%= @auditor.name %> profile</h1>
+<h1>Edit <%= @auditor.name %>'s profile</h1>
 
 <form action= "/auditors/<%= @auditor.id %>" method= "post">
 		<input type="hidden" 	name="_method"value="patch">
 		<input type="text" 		name="name" 	value="<%= @auditor.name %>">
 		<input type="text"		name="email"	value="<%= @auditor.email %>">
 		<input type="text"		name="phone"	value="<%= @auditor.phone %>">
-		<input type="submit"	value="Edit Auditor">
+		<input type="submit"	value="Save Changes">
 </form>
 
-<a href="/auditors/index">Return to Auditor List</a>
+</br>
+<p><a href="/auditors">Return to Employee List</a></p>

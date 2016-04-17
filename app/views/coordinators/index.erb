@@ -1,21 +1,28 @@
 <h1>List of All Coordinators</h1>
 
-
-<table border="1" width="50%">
-	<tr>
-		<th>Auditor's Name</th>
-		<th>Auditor's Email Address</th>
-		<th>Auditor's Phone</th>
-	</tr>
-	<tr>
-		<% @coordinators.each do |coordinator| %>
-	<tr>
-		<th><%= coordinator.name %></th>
-		<th><%= coordinator.email%></th>
-		<th><%= coordinator.phone%></th>
-		<th><a href="/coordinators/<%= coordinator.id %>/edit">Edit</th></a>
-		<% end %>
-	</tr>
-</table>
+<div class="row">
+	<div class="col-md-6">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Auditor's Name</th>
+					<th>Auditor's Email Address</th>
+					<th>Auditor's Phone</th>
+					<th>Edit User</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @coordinators.each do |coordinator| %>
+				<tr>
+					<td><a href="/coordinators/<%= coordinator.id %>"><%= coordinator.name %></td></a>
+					<td><%= coordinator.email%></td>
+					<td><%= coordinator.phone%></td>
+					<td><a href="/coordinators/<%= coordinator.id %>/edit">Edit</td></a>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
 
 <p><a href="/coordinators/new"></p>Add new Coordinators</a>

@@ -1,8 +1,11 @@
 <h1>Create New Hospital</h1>
 
-<form action= "/hospitals" method= "post">
-		<input type="text" 		placeholder= "Name" 					name="name" 	value="<%= @auditor.name %>">
-		<input type="text"		placeholder= "City"						name="city"		value="<%= @auditor.city %>">
-		<input type="text"		placeholder= "Phone Number"		name="phone"	value="<%= @auditor.phone %>">
-		<input type="submit"	value="Make a New Hospital">
+<form action="/hospital"	method="post">
+	<input type="text"	placeholder="Name"					name="name"		value="<%= @hospital.name %>">
+	<input type="text"	placeholder="City"					name="city"		value="<%= @hospital.city %>">
+	<input type="text"	placeholder="Phone Number"	name="phone"	value="<%= @hospital.phone %>">
+	<input type="submit"	value="Add new Auditor">
 </form>
+
+<p><a href="/hospital">Return to Hospital List</a></p>
+

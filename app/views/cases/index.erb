@@ -1,22 +1,31 @@
 <h1>List of All Cases</h1>
 
-
-<table border="1" width="50%">
-	<tr>
-		<th>Case Number</th>
-		<th>Coordinator Name</th>
-		<th>Auditor Name</th>
-		<th>Hospital Name</th>
-	</tr>
-	<tr>
-		<% @cases.each do |case| %>
-	<tr>
-		<th><%= case.name %></th>
-		<th><%= case.email%></th>
-		<th><%= case.phone%></th>
-		<th><a href="/cases/<%= case.id %>/edit">Edit</th></a>
-		<% end %>
-	</tr>
-</table>
-
+<div class="row">
+	<div class="col-md-6">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Case Number</th>
+					<th>Coordinator Name</th>
+					<th>Auditor Name</th>
+					<th>Hospital Name</th>
+					<th>Patient Name</th>
+					<th>Edit Cases</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @cases.each do |c| %>
+				<tr>
+					<td><%= c.number %></td>
+					<td><%= c.coordinator.name %></td>
+					<td><%= c.auditor.name %></td>
+					<td><%= c.hospital.name %></td>
+					<td><%= c.patient.name %></td>
+					<td><a href="/cases/<%= c.id %>/edit">edit</td></a>
+				</tr>
+				<% end %>
+			</tbody>	
+		</table>
+	</div>
+</div>
 <p><a href="/cases/new"></p>Add new Case</a>

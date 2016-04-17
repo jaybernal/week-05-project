@@ -1,0 +1,38 @@
+<h1>Edit Cases</h1>
+<div class = ".col-md-4">
+	<form action="/cases/<%= @case.id %>"	method="post">
+
+	<h4>Case Number</h4>
+		<input type="text" name="number" value="<%= @case.number %>">
+		<input type="hidden" name="_method"	value="patch">
+		<h4>Auditors</h4>
+		<select name="auditor_id">
+			<% @auditors.each do |auditor| %>
+			<option value="<%= auditor.id %>"><%= auditor.name %></option>
+			<% end %>
+		</select></br>
+
+		<h4>Patients</h4>
+		<select name="patient_id">
+			<% @patients.each do |patient| %>
+			<option value="<%= patient.id %>"><%= patient.name %></option>
+			<% end %>
+		</select></br>
+
+		<h4>Coordinators</h4>
+		<select name="coordinator_id">
+			<% @coordinators.each do |coordinator| %>
+			<option value="<%= coordinator.id %>"><%= coordinator.name %></option>
+			<% end %>
+		</select></br>
+
+		<h4>Hospitals</h4>
+		<select name="hospital_id">
+			<% @hospitals.each do |hospital| %>
+			<option value="<%= hospital.id %>"><%= hospital.name %></option>
+			<% end %>
+		</select></br>
+	<input type="submit"	value="Save Changes">
+
+	</form>
+</div>

@@ -4,4 +4,6 @@ class Case < ActiveRecord::Base
 
 	belongs_to :coordinator
 	belongs_to :auditor
+	belongs_to :hospital
+	belongs_to :patient
 end

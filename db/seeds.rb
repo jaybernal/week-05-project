@@ -18,4 +18,4 @@ Hospital.create(name: "American General", city: "Gering", phone: "308-632-0000")
 
 Patient.create(name: "Jane Doe", gender: "female", term_date: 04012016, organs_list: "heart, lungs, liver", hospital: Hospital.first)
 Patient.create(name: "Jack Daniels", gender: "male", term_date: 04122016, organs_list: "heart, liver", hospital: Hospital.second)
-Patient.create(name: "Jim Beam", gender: "male", term_date: 03122017, organs_list: "heart, lungs, kidneysf", hospital: Hospital.last)
+Patient.create(name: "Jim Beam", gender: "male", term_date: 03122017, organs_list: "heart, lungs, kidney", hospital: Hospital.last)

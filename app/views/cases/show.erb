@@ -1,0 +1,19 @@
+<h1>Case Details</h1>
+
+<ul>
+
+	<p>Assignment Details</p>
+	<li>Case number: <%= @case.number %></li>
+	<li>Auditor Name: <%= @case.auditor.name %></li>
+	<li>Coordinator Name:<%= @case.coordinator.name %></li>
+	<li>Hospital Name: <%= @case.hospital.name %></li></br>
+
+
+	<p>Patient Details</p>
+	<li>Name: <%= @case.patient.name %></li>
+	<li>Date of Death: <%= @case.patient.term_date %></li>
+	<li>Gender:<%= @case.patient.gender %></li>
+	<li>Organs Donated: <%= @case.patient.organs_list %></li>
+</ul>
+
+<a href="/cases">Return to Case List</a>
